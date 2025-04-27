@@ -1,0 +1,16 @@
+for sector heads (subscribe to everything related to sector heads)
+mosquitto_sub  -t "nagpur/#"
+mosquitto_sub  -t "chandrapur/#"
+mosquitto_sub  -t "jam/#"
+mosquitto_sub  -t "delhi/#"
+# for facility heads
+mosquitto_sub  -t "+/sanitization/facility_head"
+mosquitto_sub  -t "+/parking/facility_head"
+mosquitto_sub  -t "+/power/facility_head"
+mosquitto_sub  -t "+/traffic/facility_head"
+mosquitto_sub  -t "+/food/facility_head"
+# pub messages
+mosquitto_pub  -t "nagpur/sanitization/facility_head" -m "Sanitization issue in Nagpur"
+mosquitto_pub  -t "jam/parking/facility_head" -m "no parking space in Jam"
+
+
